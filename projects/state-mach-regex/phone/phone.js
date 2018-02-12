@@ -10,6 +10,14 @@ var rl = readline.createInterface({
 // This code reads a line at a time from stdin
 
 rl.on('line', function (line) {
+  // remove extra characters
+  let phone = line.replace(/[^\d]/g, "");
+
+  if (phone.length == 10) {
+    return phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1$2$3");
+  }
+  
+  return "No number was found";
 
     // !!!! IMPLEMENT ME
 
