@@ -14,10 +14,11 @@ rl.on('line', function (line) {
   let phone = line.replace(/[^\d]/g, "");
 
   if (phone.length == 10) {
-    return phone.replace(/(\d{3})(\d{3})(\d{4})/, "$1$2$3");
-  }
+    return phone;
+  } else {
   
-  return "No number was found";
+    return "No number was found";
+  }
 
     // !!!! IMPLEMENT ME
 
